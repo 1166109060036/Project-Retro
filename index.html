@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: #111;
+            text-decoration: none;
+        }
+        .content-container {
+            padding-bottom: 50px;
+            background-color: #111;
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            text-align: center;
+            letter-spacing: 7.68px;
+        }
+        .content-title {
+
+            font-weight: 100;
+        }
+        .click-start-button {
+            text-shadow: -1px 9px 4.5px rgba(255, 255, 255, 0.25);
+            font-family: Inter, sans-serif;
+            color: #fff;
+            font-size: 96px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 18px; /* Adjust based on design requirement */
+        }
+        .banner-image {
+            aspect-ratio: 1.72;
+            object-fit: auto;
+            object-position: center;
+            width: 100%;
+        }
+        @media (max-width: 991px) {
+            .content-title { 
+                font-size: 40px; 
+            }
+            .banner-image { 
+                max-width: 100%; 
+            }
+            .click-start-button {
+                max-width: 100%;
+                font-size: 16px; /* Adjust based on design requirement */
+            }
+        }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="content-container">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/2f38fa7cf9b1da70f21ab7c8984d009986b7a0fd6495f633dc75d9c64f47f4aa?apiKey=36e7c22b90fc48a0a9ea144f231685a4&" alt="A visually compelling banner" class="banner-image" />
+            <a href="select.html" class="click-start-button">Click to Start</a>
+        </div>
+    </main>
+</body>
+</html>
