@@ -32,10 +32,10 @@ h1 {
 
 .game-list {
     background-color: #1c1c1c;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   flex-wrap: wrap;
-  gap: 20px;
+  grid-gap: 2rem;
   padding: 20px;
 }
 
