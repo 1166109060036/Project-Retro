@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-retro
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: project-retro
+  template:
+    metadata:
+      labels:
+        app: project-retro
+    spec:
+      containers:
+      - name: project-retro
+        image: koonkoo2/project-retro:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-project-retro
+spec:
+  type: ClusterIP
+  selector:
+    app: project-retro
+  ports:
+  - port: 80
+    targetPort: 80
